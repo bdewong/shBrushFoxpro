@@ -273,10 +273,10 @@
 
 		this.regexList = [
 			{ regex: /^\s*\*.*$/gm,									css: 'comments' },			// one line comments
-			{ regex: &&.*$,										css: 'comments' },			// inline comments
+			{ regex: /&&.*$/gm,										css: 'comments' },			// inline comments
 			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,	css: 'string' },			// strings
 			{ regex: /^\s*#.*$/gm,									css: 'preprocessor' },		// preprocessor tags like #region and #endregion
-			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword' }			// vb keyword
+			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),	css: 'keyword' }			// vb keyword
 			];
 
 		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
