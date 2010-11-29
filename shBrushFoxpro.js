@@ -272,8 +272,8 @@
 						'_WWIDTHP _WZOOM';
 
 		this.regexList = [
-			{ regex: /\*.*$/gm,										css: 'comments' },			// one line comments
-			{ regex: /^\s*&&.*$/gm,									css: 'comments' },			// inline comments
+			{ regex: /^\s*\*.*$/gm,									css: 'comments' },			// one line comments
+			{ regex: /&&.*$/gm,										css: 'comments' },			// inline comments
 			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,	css: 'string' },			// strings
 			{ regex: /^\s*#.*$/gm,									css: 'preprocessor' },		// preprocessor tags like #region and #endregion
 			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword' }			// vb keyword
